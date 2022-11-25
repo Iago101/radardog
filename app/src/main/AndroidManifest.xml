@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.edu.ifsp.arq.ads.dmos5.radardog">
 
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_alt"
@@ -9,14 +13,22 @@
         android:roundIcon="@drawable/logo_alt"
         android:supportsRtl="true"
         android:theme="@style/Theme.RadarDog">
+
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
         </activity>
     </application>
 
