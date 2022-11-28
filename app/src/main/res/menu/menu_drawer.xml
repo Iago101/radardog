@@ -11,13 +11,9 @@
         android:title="@string/menu_drawer_user_profile"
         android:icon="@drawable/icon_user_foreground"/>
 
-    <item android:id="@+id/nav_register_category"
-        android:title="@string/menu_drawer_race_register"
-        android:icon="@mipmap/icon_dog_foreground"/>
-
     <item android:id="@+id/nav_register_item"
         android:title="@string/menu_drawer_dog_register"
-        android:icon="@mipmap/icon_race_foreground"/>
+        android:icon="@drawable/pets_black_24dp__1_"/>
 
     <item android:id="@+id/nav_logout"
         android:title="@string/menu_drawer_logout"

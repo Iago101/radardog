@@ -3,7 +3,7 @@
     package="br.edu.ifsp.arq.ads.dmos5.radardog">
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="17" />
 
     <application
@@ -28,6 +28,16 @@
 
         <activity
             android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".DogDataActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".UserDataActivity"
             android:exported="true">
         </activity>
     </application>

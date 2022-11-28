@@ -27,5 +27,8 @@
     <string name="dog_color">Cor do Cachorro</string>
     <string name="dog_last_seen_place">Endereço do Último Avistamento</string>
     <string name="start_search">Registrar Desaparecimento</string>
+    <string name="toggle_open">Abrir</string>
+    <string name="toggle_close">Fechar</string>
+    <string name="txt_enter">Entrar</string>
 
 </resources>
