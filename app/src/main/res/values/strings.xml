@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">RadarDog</string>
+    <!-- menu -->
+    <string name="menu_drawer_home">Home</string>
+    <string name="menu_drawer_user_profile">Perfil</string>
+    <string name="menu_drawer_race_register">Cadastrar Raça</string>
+    <string name="menu_drawer_dog_register">Cadastre Seu Cachorro</string>
+    <string name="menu_drawer_logout">Sair</string>
+    <string name="menu_header_enter">Entrar</string>
+
+    <!-- login -->
+
+    <string name="txt_layout_email">E-mail</string>
+    <string name="txt_layout_password">Senha</string>
+    <string name="txt_layout_name">Nome</string>
+    <string name="btn_user_login">Login</string>
+    <string name="btn_user_cadastrar">Cadastrar</string>
+    <string name="txt_layout_forgot_password">Esqueceu a senha?</string>
+
+
+    <!-- perfil do usuário-->
+
+    <string name="user_info">Informações do Usuário</string>
+    <string name="user_register_name">Nome</string>
+    <string name="user_profile_surname">Sobrenome</string>
+    <string name="btn_profile_save">Salvar</string>
+    <string name="user_qtd_pets">Quantidade de Pets</string>
+    <string name="user_profile_email">E-mail</string>
+    <string name="user_cellphone">Telefone</string>
+    <string name="user_cellphone2">Telefone Secundário</string>
+
+    <!-- cachorro-->
+
+    <string name="register_dog">Registrar Cachorro</string>
+    <string name="dog_name">Nome do Cachorro</string>
+    <string name="dog_nature">Comportamento</string>
+    <string name="dog_color">Cor do Cachorro</string>
+    <string name="dog_last_seen_place">Endereço do Último Avistamento</string>
+    <string name="start_search">Registrar</string>
+    <string name="toggle_open">Abrir</string>
+    <string name="toggle_close">Fechar</string>
+    <string name="txt_enter">Entrar</string>
+    <string name="dog_breed">Raça</string>
+    <string name="dog_description">Descrição</string>
+
+</resources>
