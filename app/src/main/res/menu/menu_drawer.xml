@@ -11,7 +11,7 @@
         android:title="@string/menu_drawer_user_profile"
         android:icon="@drawable/icon_user_foreground"/>
 
-    <item android:id="@+id/nav_register_item"
+    <item android:id="@+id/nav_register_dog"
         android:title="@string/menu_drawer_dog_register"
         android:icon="@drawable/pets_black_24dp__1_"/>
 

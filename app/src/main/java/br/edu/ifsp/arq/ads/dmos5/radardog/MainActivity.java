@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                 intent = new Intent(MainActivity.this, UserDataActivity.class);
                                 startActivity(intent);
                                 break;
-                            case R.id.nav_register_item:
+                            case R.id.nav_register_dog:
                                 intent = new Intent(MainActivity.this, DogDataActivity.class);
                                 startActivity(intent);
                                 break;

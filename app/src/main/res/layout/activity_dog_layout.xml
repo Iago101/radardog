@@ -56,19 +56,20 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/txt_layout_profile_surname"
+                    android:id="@+id/txt_layout_dog_breed"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_margin="8dp"
-                    android:hint="@string/dog_color">
+                    android:hint="@string/dog_breed">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txt_edit_surname"
+                        android:id="@+id/txt_edit_dog_breed"
                         android:inputType="textCapWords|textPersonName"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -79,23 +80,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/txt_layout_profile_cellphone"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_margin="8dp"
-                    android:hint="@string/dog_last_seen_place">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_edit_last_seen_place"
-                        android:inputType="textCapWords|textPersonName"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
@@ -120,16 +104,48 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-
-                <Spinner
-                    android:id="@+id/sp_race"
-                    style="@style/Widget.AppCompat.Spinner.DropDown"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="0dp"
-                    android:layout_height="44dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/txt_layout_dog_des"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_margin="8dp"
-                    android:layout_weight="1" />
+                    android:hint="@string/dog_description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_edit_dog_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="132dp"
+                        android:inputType="textCapWords|textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/txt_layout_profile_cellphone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_margin="8dp"
+                android:hint="@string/dog_last_seen_place">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_edit_last_seen_place"
+                    android:inputType="textCapWords|textPersonName"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
 
             <Button
                 android:id="@+id/btn_dog_register"
