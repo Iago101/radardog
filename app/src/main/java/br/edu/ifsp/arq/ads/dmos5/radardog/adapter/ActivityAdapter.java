@@ -1,4 +1,7 @@
 package br.edu.ifsp.arq.ads.dmos5.radardog.adapter;
 
-public class ActivityAdapter {
+import br.edu.ifsp.arq.ads.dmos5.radardog.DogDataActivity;
+
+public class ActivityAdapter extends ArrayAdapter<Dog>{
+
 }
