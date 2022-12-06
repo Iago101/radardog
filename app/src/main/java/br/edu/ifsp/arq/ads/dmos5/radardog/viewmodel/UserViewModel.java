@@ -24,36 +24,37 @@ public class UserViewModel extends AndroidViewModel {
         this.usersRepository = new UsersRepository(application);
     }
 
-    public void createUser(User user){
+    public void createUser(User user) {
         usersRepository.createUser(user);
     }
 
-    public void updateUser(User user){
+    public void updateUser(User user) {
         usersRepository.update(user);
     }
 
-    public LiveData<User> login(String email, String password){
+    public LiveData<User> login(String email, String password) {
         return usersRepository.login(email, password);
     }
 
-    public void logout(){
+    public void logout() {
         PreferenceManager.getDefaultSharedPreferences(getApplication())
                 .edit()
                 .remove(USER_ID)
                 .apply();
     }
 
-    public LiveData<User> isLogged(){
+    public LiveData<User> isLogged() {
         Optional<String> id = Optional.ofNullable(
                 PreferenceManager.getDefaultSharedPreferences(getApplication())
                         .getString(USER_ID, null)
         );
-        if(!id.isPresent()){
+        if (!id.isPresent()) {
             return new MutableLiveData<>(null);
         }
         return usersRepository.loadUser(id.get());
     }
 
-    public void resetPassword(String email){
+    public void resetPassword(String email) {
         usersRepository.resetPassword(email);
     }
+}

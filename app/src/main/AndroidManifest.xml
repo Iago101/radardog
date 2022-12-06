@@ -3,8 +3,8 @@
     package="br.edu.ifsp.arq.ads.dmos5.radardog">
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="32"
+        android:targetSdkVersion="32" />
 
     <application
         android:allowBackup="true"
