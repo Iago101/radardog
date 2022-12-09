@@ -15,8 +15,11 @@
         android:title="@string/menu_drawer_dog_register"
         android:icon="@drawable/pets_black_24dp__1_"/>
 
+    <item android:id="@+id/nav_login"
+        android:title="Login"
+        android:icon="@drawable/login"/>
+
     <item android:id="@+id/nav_logout"
         android:title="@string/menu_drawer_logout"
         android:icon="@drawable/icon_logout_foreground"/>
-
 </menu>

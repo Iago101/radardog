@@ -69,10 +69,15 @@ public class MainActivity extends AppCompatActivity {
                                 intent = new Intent(MainActivity.this, DogDataActivity.class);
                                 startActivity(intent);
                                 break;
+                            case R.id.nav_login:
+                                intent = new Intent(MainActivity.this, UserLoginActivity.class);
+                                startActivity(intent);
+                                break;
                             case R.id.nav_logout:
                                 // userViewModel.logout();
                                 txtLogin.setText(R.string.txt_enter);
                                 break;
+
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         return true;

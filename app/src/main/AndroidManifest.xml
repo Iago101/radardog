@@ -3,7 +3,7 @@
     package="br.edu.ifsp.arq.ads.dmos5.radardog">
 
     <uses-sdk
-        android:minSdkVersion="32"
+        android:minSdkVersion="28"
         android:targetSdkVersion="32" />
 
     <application
@@ -38,6 +38,16 @@
 
         <activity
             android:name=".UserDataActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".UserLoginActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".UserRegisterActivity"
             android:exported="true">
         </activity>
     </application>
