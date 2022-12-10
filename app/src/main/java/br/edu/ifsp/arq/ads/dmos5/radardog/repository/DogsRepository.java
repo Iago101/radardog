@@ -19,11 +19,11 @@ import java.util.List;
 
 import br.edu.ifsp.arq.ads.dmos5.radardog.model.Dog;
 
-public class ActivitiesRepository {
+public class DogsRepository {
 
     private FirebaseFirestore firestore;
 
-    public ActivitiesRepository(Application application) {
+    public DogsRepository(Application application) {
         firestore = FirebaseFirestore.getInstance();
     }
 
@@ -51,7 +51,6 @@ public class ActivitiesRepository {
     public LiveData<List<Dog>> getAllDogs(String dogId) {
         MutableLiveData<List<Dog>> liveData = new MutableLiveData<>();
         List<Dog> dogs = new ArrayList<>();
-        // broken dogid, tem q trazer todos
         firestore.collection("dogs").whereEqualTo("dogID", dogId).orderBy("date", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
