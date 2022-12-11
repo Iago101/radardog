@@ -1,11 +1,14 @@
 package br.edu.ifsp.arq.ads.dmos5.radardog.model;
 
 import androidx.annotation.NonNull;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+import java.util.Objects;
 import java.util.UUID;
 
-public class Dog {
+public class Dog implements Serializable {
 
     @NonNull
     @PrimaryKey
@@ -24,6 +27,11 @@ public class Dog {
         this.description = description;
         this.lastplace = lastplace;
         this.gender = gender;
+    }
+
+    @Ignore
+    public Dog(){
+        this("", "", "", "","");
     }
 
     @NonNull
@@ -75,6 +83,19 @@ public class Dog {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Dog dog = (Dog) o;
+        return id.equals(dog.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
 }

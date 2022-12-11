@@ -30,6 +30,9 @@ public class UserLoginActivity extends AppCompatActivity {
     private Button btnEnter;
     private TextInputEditText txtEmail;
     private TextInputEditText txtPassword;
+    private TextView txtForgotPassword;
+    private AlertDialog dialogResetPassword;
+
     private UserViewModel userViewModel;
 
     @Override
@@ -40,8 +43,38 @@ public class UserLoginActivity extends AppCompatActivity {
         setToolBar();
         setBtnRegister();
         setBtnEnter();
+        setTxtForgotPassword();
+        buildResetPasswordDialog();
     }
 
+    private void buildResetPasswordDialog() {
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_reset_password, null);
+        TextInputEditText txtResetEmail = view.findViewById(R.id.txt_edt_reset_email);
+
+        dialogResetPassword = new MaterialAlertDialogBuilder(this)
+                .setPositiveButton(R.string.btn_ok_resetar_senha, (dialog, which) -> {
+                    userViewModel.resetPassword(txtResetEmail.getText().toString());
+                    Toast.makeText(UserLoginActivity.this, getString(R.string.msg_resetar_email), Toast.LENGTH_LONG).show();
+                    txtResetEmail.getText().clear();
+                })
+                .setNegativeButton(R.string.btn_cancel_resetar_senha, (dialog, which) -> {
+                    txtResetEmail.getText().clear();
+                })
+                .setIcon(android.R.drawable.ic_dialog_email)
+                .setView(view)
+                .setTitle(R.string.title_dialog_resetar_senha)
+                .create();
+    }
+
+    private void setTxtForgotPassword() {
+        txtForgotPassword = findViewById(R.id.txt_forgot_password);
+        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogResetPassword.show();
+            }
+        });
+    }
 
     private void setBtnEnter() {
         txtEmail = findViewById(R.id.txt_edt_email);
@@ -60,25 +93,12 @@ public class UserLoginActivity extends AppCompatActivity {
                                             getString(R.string.msg_login),
                                             Toast.LENGTH_SHORT).show();
                                 }else{
-                                    Toast.makeText(getApplicationContext(),
-                                            getString(R.string.msg_logged),
-                                            Toast.LENGTH_SHORT).show();
-                                    setUserName();
                                     finish();
                                 }
                             }
                         });
             }
         });
-    }
-
-    private void setUserName(){
-        FirebaseUser CurrentUser = FirebaseAuth.getInstance().getCurrentUser();
-        String name = CurrentUser.getDisplayName();
-
-        setContentView(R.layout.menu_header_layout);
-        TextView txtProfile = findViewById(R.id.header_profile_name);
-        txtProfile.setText(name);
     }
 
     private void setBtnRegister() {

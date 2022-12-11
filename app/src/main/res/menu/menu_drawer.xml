@@ -7,6 +7,10 @@
         android:title="@string/menu_drawer_home"
         android:icon="@drawable/icon_home_foreground"/>
 
+    <item android:id="@+id/nav_login"
+        android:title="@string/menu_drawer_login"
+        android:icon="@drawable/icon_login_foreground"/>
+
     <item android:id="@+id/nav_account"
         android:title="@string/menu_drawer_user_profile"
         android:icon="@drawable/icon_user_foreground"/>
@@ -15,9 +19,6 @@
         android:title="@string/menu_drawer_dog_register"
         android:icon="@drawable/pets_black_24dp__1_"/>
 
-    <item android:id="@+id/nav_login"
-        android:title="Login"
-        android:icon="@drawable/login"/>
 
     <item android:id="@+id/nav_logout"
         android:title="@string/menu_drawer_logout"

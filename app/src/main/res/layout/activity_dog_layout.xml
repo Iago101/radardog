@@ -51,7 +51,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txt_edit_name"
+                        android:id="@+id/txt_edit_dog_name"
                         android:inputType="textCapWords|textPersonName"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -85,15 +85,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/txt_layout_dog_nature"
+                    android:id="@+id/txt_layout_dog_gender"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_margin="8dp"
-                    android:hint="@string/dog_nature">
+                    android:hint="@string/dog_gender">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txt_edit_dog_nature"
+                        android:id="@+id/txt_edit_dog_gender"
                         android:inputType="textCapWords|textPersonName"/>
 
                 </com.google.android.material.textfield.TextInputLayout>

@@ -23,20 +23,20 @@ public class DogViewModel extends AndroidViewModel {
         dogsRepository = new DogsRepository(application);
     }
 
-    public void createActivity(Dog dog){
+    public void createPet(Dog dog){
         dogsRepository.insert(dog);
     }
 
-    public void updateActivity(Dog dog){
+    public void updateDog(Dog dog){
         dogsRepository.update(dog);
     }
 
-    public void deleteActivity(Dog dog){
+    public void deleteDog(Dog dog){
         dogsRepository.delete(dog);
     }
 
-    public LiveData<List<Dog>> allDogs(String dogId){
-        return dogsRepository.getAllDogs(dogId);
+    public LiveData<List<Dog>> allDogs(String userId){
+        return dogsRepository.getAllDogs(userId);
     }
 
 
