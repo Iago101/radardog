@@ -51,7 +51,7 @@ public class DogsRepository {
     public LiveData<List<Dog>> getAllDogs(String dogId) {
         MutableLiveData<List<Dog>> liveData = new MutableLiveData<>();
         List<Dog> dogs = new ArrayList<>();
-        firestore.collection("dogs").whereEqualTo("dogID", dogId).orderBy("date", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        firestore.collection("dogs").orderBy("date", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){

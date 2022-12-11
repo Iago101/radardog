@@ -12,6 +12,7 @@
 
     <string name="btn_login_enter">Entrar</string>
     <string name="msg_login">Usuário e/ou senha inválidos!</string>
+    <string name="msg_logged">Logado com sucesso</string>
     <string name="txt_no_account">Não tem cadastro?</string>
     <string name="txt_title_login">Login</string>
     <string name="txt_layout_email">E-mail</string>

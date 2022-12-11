@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
@@ -58,12 +60,25 @@ public class UserLoginActivity extends AppCompatActivity {
                                             getString(R.string.msg_login),
                                             Toast.LENGTH_SHORT).show();
                                 }else{
+                                    Toast.makeText(getApplicationContext(),
+                                            getString(R.string.msg_logged),
+                                            Toast.LENGTH_SHORT).show();
+                                    setUserName();
                                     finish();
                                 }
                             }
                         });
             }
         });
+    }
+
+    private void setUserName(){
+        FirebaseUser CurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String name = CurrentUser.getDisplayName();
+
+        setContentView(R.layout.menu_header_layout);
+        TextView txtProfile = findViewById(R.id.header_profile_name);
+        txtProfile.setText(name);
     }
 
     private void setBtnRegister() {

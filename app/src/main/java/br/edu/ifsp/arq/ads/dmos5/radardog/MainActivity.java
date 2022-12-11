@@ -13,6 +13,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setToolBar();
         setDrawerLayout();
         setNavigationView();
+
     }
 
     private void setDrawerLayout() {
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 break;
                             case R.id.nav_logout:
-                                // userViewModel.logout();
+                                FirebaseAuth.getInstance().signOut();
                                 txtLogin.setText(R.string.txt_enter);
                                 break;
 
