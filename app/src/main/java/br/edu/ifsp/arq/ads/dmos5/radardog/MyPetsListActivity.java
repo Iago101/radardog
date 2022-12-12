@@ -47,7 +47,7 @@ public class MyPetsListActivity extends AppCompatActivity{
     }
 
     private void setAdapter() {
-        dogViewModel.allDogs(user.getId()).observe(this, new Observer<List<Dog>>() {
+        dogViewModel.allDogs().observe(this, new Observer<List<Dog>>() {
             @Override
             public void onChanged(List<Dog> dogs) {
                 adapter = new DogAdapter(MyPetsListActivity.this, android.R.layout.simple_list_item_1, dogs);
@@ -59,7 +59,7 @@ public class MyPetsListActivity extends AppCompatActivity{
     }
 
     public void deletePet(int pos){
-        dogViewModel.allDogs(user.getId()).observe(this, new Observer<List<Dog>>() {
+        dogViewModel.allDogs().observe(this, new Observer<List<Dog>>() {
             @Override
             public void onChanged(List<Dog> dogs) {
                 dogViewModel.deleteDog(dogs.get(pos));

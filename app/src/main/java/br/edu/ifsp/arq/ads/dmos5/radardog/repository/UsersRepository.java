@@ -36,7 +36,7 @@ public class UsersRepository {
     private static final String SIGNUP = "accounts:signUp"; // cadastre-se
     private static final String SIGNIN = "accounts:signInWithPassword"; // entrar
     private static final String PASSWORD_RESET = "accounts:sendOobCode"; // redefinição de senha
-    private static final String KEY = "?key=AIzaSyAesgvXd0KRXnT_sWDkhUH1sRvg9GZSicM";
+    private static final String KEY = "?key=AIzaSyDubsBgCG5GR5qHmOQnLs-fHZDF0fHSXBY";
 
     private FirebaseFirestore firestore;
 

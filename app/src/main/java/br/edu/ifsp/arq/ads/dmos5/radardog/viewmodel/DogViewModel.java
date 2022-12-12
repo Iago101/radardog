@@ -35,8 +35,8 @@ public class DogViewModel extends AndroidViewModel {
         dogsRepository.delete(dog);
     }
 
-    public LiveData<List<Dog>> allDogs(String userId){
-        return dogsRepository.getAllDogs(userId);
+    public LiveData<List<Dog>> allDogs(){
+        return dogsRepository.getAllDogs();
     }
 
 

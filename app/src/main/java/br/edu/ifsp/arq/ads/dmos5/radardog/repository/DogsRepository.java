@@ -48,10 +48,10 @@ public class DogsRepository {
                 });
     }
 
-    public LiveData<List<Dog>> getAllDogs(String dogId) {
+    public LiveData<List<Dog>> getAllDogs() {
         MutableLiveData<List<Dog>> liveData = new MutableLiveData<>();
         List<Dog> dogs = new ArrayList<>();
-        firestore.collection("dogs").orderBy("date", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        firestore.collection("dog").orderBy("date", Query.Direction.DESCENDING).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if(task.isSuccessful()){
