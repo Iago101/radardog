@@ -41,10 +41,9 @@ public class DogDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_layout);
-        setToolBar();
         dog = (Dog) getIntent().getExtras().getSerializable("dog");
         setComponents();
-        if(dog != null){
+        if(dog.getId() != null){
             fillFields();
         }
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
