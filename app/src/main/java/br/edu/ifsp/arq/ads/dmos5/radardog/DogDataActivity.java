@@ -44,7 +44,7 @@ public class DogDataActivity extends AppCompatActivity {
         setToolBar();
         dog = (Dog) getIntent().getExtras().getSerializable("dog");
         setComponents();
-        if(dog.getId() != null){
+        if(dog != null){
             fillFields();
         }
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);

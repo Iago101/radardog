@@ -17,16 +17,21 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.concurrent.Executor;
 
-import br.edu.ifsp.arq.ads.dmos5.radardog.database.AppDatabase;
-import br.edu.ifsp.arq.ads.dmos5.radardog.database.UserDao;
 import br.edu.ifsp.arq.ads.dmos5.radardog.model.User;
 import br.edu.ifsp.arq.ads.dmos5.radardog.viewmodel.UserViewModel;
 
@@ -39,6 +44,9 @@ public class UsersRepository {
     private static final String KEY = "?key=AIzaSyAesgvXd0KRXnT_sWDkhUH1sRvg9GZSicM";
 
     private FirebaseFirestore firestore;
+//    private FirebaseAuth mAuth;
+//    private FirebaseAuth.AuthStateListener mAuthListener;
+
 
     private RequestQueue queue;
 
@@ -49,6 +57,36 @@ public class UsersRepository {
         queue = Volley.newRequestQueue(application);
         preferences = PreferenceManager.getDefaultSharedPreferences(application);
     }
+
+//    void onCreate(){
+//        mAuth = FirebaseAuth.getInstance();
+//        mAuthListener = new FirebaseAuth.AuthStateListener() {
+//            @Override
+//            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                FirebaseUser user = firebaseAuth.getCurrentUser();
+//                if (user != null) {
+//                    Log.d("AUTH", "onAuthStateChanged:signed_in:" + user.getUid());
+//                } else {
+//                    Log.d("AUTH", "onAuthStateChanged:signed_out");
+//                }
+//
+//            }
+//        };
+//
+//    }
+
+//    public void onStart() {
+//        super.onStart();
+//        mAuth.addAuthStateListener(mAuthListener);
+//    }
+//
+//    public void onStop() {
+//        super.onStop();
+//        if (mAuthListener != null) {
+//            mAuth.removeAuthStateListener(mAuthListener);
+//        }
+//    }
+
 
     public void createUser(User user){
         JSONObject params = new JSONObject();
@@ -106,6 +144,19 @@ public class UsersRepository {
         queue.add(request);
     }
 
+//        public void login(String email, String password) {
+//            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
+//                @Override
+//                public void onComplete(@NonNull Task<AuthResult> task) {
+//
+//                    if (!task.isSuccessful()) {
+//                        Log.w("AUTH", "Falha ao efetuar o Login: ", task.getException());
+//                    } else {
+//                        Log.d("AUTH", "Login Efetuado com sucesso!!!");
+//                    }
+//                }
+//            });
+//        }
     public LiveData<User> login(String email, String password){
         MutableLiveData<User> liveData = new MutableLiveData<>();
 
@@ -168,6 +219,8 @@ public class UsersRepository {
         queue.add(request);
         return liveData;
     }
+
+
 
     public LiveData<User> loadUser(String userId){
         MutableLiveData<User> liveData = new MutableLiveData<>();

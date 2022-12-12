@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip">
+
+    <TextView
+        android:id="@+id/dog_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+
+        android:text="NAME"
+        android:textSize="30sp"
+        />
+
+
+    <TextView
+        android:id="@+id/dog_breed_lbl"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/dog_info"
+        android:layout_alignParentLeft="true"
+
+        android:gravity="center_vertical"
+        android:text="Raça: "
+
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dog_breed_in"
+
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+
+        android:layout_below="@id/dog_info"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/dog_breed_lbl"
+
+        android:gravity="center_vertical"
+        android:text="xxxxx"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dog_des_lbl"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dog_breed_in"
+
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+
+        android:text="Descrição: "
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/dog_des_in"
+
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+
+        android:layout_below="@id/dog_breed_in"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/dog_des_lbl"
+
+        android:gravity="center_vertical"
+        android:text="xxxx"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/dog_des_in">
+
+        <Button
+            android:id="@+id/btn_edt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="EDITAR"
+            android:backgroundTint="#F9D62E"/>
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="EXCLUIR"
+            android:backgroundTint="#DD0523"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

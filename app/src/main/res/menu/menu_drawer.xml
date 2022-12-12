@@ -9,7 +9,7 @@
 
     <item android:id="@+id/nav_login"
         android:title="@string/menu_drawer_login"
-        android:icon="@drawable/icon_login_foreground"/>
+        android:icon="@drawable/login"/>
 
     <item android:id="@+id/nav_account"
         android:title="@string/menu_drawer_user_profile"
